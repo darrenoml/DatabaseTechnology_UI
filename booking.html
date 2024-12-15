@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="tour.css" />
+</head>
+<body>
+    <nav>
+        <img src="assets/logo.png" alt="Logo" width="100px" />
+        <h3>BINUSANTARA Travel</h3>
+    </nav>
+    <header>
+        <h1>Booking Details</h1>
+    </header>
+    <section>
+        <h2>Booking Information</h2>
+        <form id="bookingForm" action="summary.html" method="get">
+            <input type="hidden" id="tour" name="tour" />
+            <input type="hidden" id="flightID" name="flightID" />
+            <input type="hidden" id="returnFlightID" name="returnFlightID" />
+        
+            <p><strong>Flight To Destination:</strong> <span id="flightInfo"></span></p>
+            <p><strong>Return Flight:</strong> <span id="returnFlightInfo"></span></p>
+        
+            <label for="class">Choose a class:</label>
+            <select id="class" name="class" required>
+                <option value="Economy">Economy</option>
+                <option value="Business">Business</option>
+                <option value="First">First</option>
+            </select><br /><br />
+        
+            <label for="seats">Number of Seats (1-20):</label>
+            <input type="number" id="seats" name="seats" min="1" max="20" required /><br /><br />
+        
+            <button type="submit">Confirm Booking</button>
+        </form>        
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tourName = urlParams.get("tour");
+            const flightField = document.getElementById("flightID");
+            const returnFlightField = document.getElementById("returnFlightID");
+            const flightInfoDisplay = document.getElementById("flightInfo");
+            const returnFlightInfoDisplay = document.getElementById("returnFlightInfo");
+
+        const tourToFlightMap = {
+            "Greece": {
+                flightID: "FLIGHT0002",
+                returnFlightID: "FLIGHT0012",
+                outbound: "Garuda Indonesia - Soekarno-Hatta to Athens International Airport",
+                return: "Aegean Airlines - Athens International Airport to Soekarno-Hatta"
+            },
+            "France": {
+                flightID: "FLIGHT0001",
+                returnFlightID: "FLIGHT0011",
+                outbound: "Garuda Indonesia - Soekarno-Hatta to Charles de Gaulle Airport",
+                return: "Air France - Charles de Gaulle to Soekarno-Hatta"
+            },
+            "America": {
+                flightID: "FLIGHT0003",
+                returnFlightID: "FLIGHT0013",
+                outbound: "Garuda Indonesia - Soekarno-Hatta to JFK",
+                return: "United Airlines - JFK to Soekarno-Hatta"
+            },
+            "Egypt": {
+                flightID: "FLIGHT0004",
+                returnFlightID: "FLIGHT0014",
+                outbound: "Garuda Indonesia - Soekarno-Hatta to Cairo International Airport",
+                return: "EgyptAir - Cairo International Airport to Soekarno-Hatta"
+            }
+        };
+
+        if (tourName && tourToFlightMap[tourName]) {
+            const selectedTour = tourToFlightMap[tourName];
+            flightField.value = selectedTour.flightID;
+            returnFlightField.value = selectedTour.returnFlightID;
+
+            flightInfoDisplay.textContent = selectedTour.outbound;
+            returnFlightInfoDisplay.textContent = selectedTour.return;
+            document.getElementById("tour").value = tourName;
+        } else {
+            flightInfoDisplay.textContent = "Flight details unavailable.";
+            returnFlightInfoDisplay.textContent = "Return flight details unavailable.";
+            console.warn("Invalid or missing tour ID!");
+        }
+    });
+    </script>
+</body>
+</html>

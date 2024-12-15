@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tour.css">
+    <title>France Tour</title>
+</head>
+<body>
+    <nav>
+        <img src="assets/logo.png" alt="Logo" width="100px">
+        <h3>BINUSANTARA Travel</h3>
+    </nav>
+    
+    <header>
+        <h1>France Tour</h1>
+        <p>6-day tour of France and its most famous landmarks</p>
+    </header>
+
+    <section>
+        <h2>Destinations</h2>
+        <div class="destinations-container">
+            <div class="destination-card">
+                <img class="places-images" src="assets/eiffel.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Eiffel Tower</h3>
+                <p>Iconic iron lattice tower in Paris</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets/Louvre-Museum.jpg" alt="Louvre Museum"
+                width="420px"
+                height="400px">
+                <h3>Louvre Museum</h3>
+                <p>Home of the Mona Lisa</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets/arc-de-triomphe.jpg" alt="Arc de Triomphe"
+                width="420px"
+                height="400px">
+                <h3>Arc de Triomphe</h3>
+                <p>Triumphal arch honoring those who fought for France</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets/Notre-Dame.jpg" alt="Notre Dame Cathedral"
+                width="420px"
+                height="400px">
+                <h3>Notre Dame Cathedral</h3>
+                <p>Famous Gothic architecture</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets/moint%20saint%20michel.jpg" alt="Mont-Saint-Michel Abbey"
+                width="420px"
+                height="400px">
+                <h3>Mont-Saint-Michel Abbey</h3>
+                <p>Medieval abbey in Normandy</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets/Mont_Blanc.jpg" alt="Mont Blanc"
+                width="420px"
+                height="400px">
+                <h3>Mont Blanc</h3>
+                <p>Tallest mountain in the Alps</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Tour Details</h2>
+        <p><strong>Start Date:</strong> January 15, 2025</p>
+        <p><strong>End Date:</strong> January 21, 2025</p>
+        <p><strong>Price:</strong> IDR 25,000,000</p>
+    </section>
+
+    <button class="confirm-btn" onclick="confirmBooking('France')">Book Now</button>
+
+    <script>
+        // Function to redirect user to the booking page with the correct tour parameter
+        function confirmBooking(tourName) {
+            window.location.href = `booking.html?tour=${tourName}`;
+        }
+    </script>
+
+</body>
+</html>

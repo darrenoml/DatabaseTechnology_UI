@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tour.css">
+    <title>Egypt Tour</title>
+</head>
+<body>
+    <nav>
+        <img src="assets/logo.png" alt="Logo" width="100px">
+        <h3>BINUSANTARA Travel</h3>
+    </nav>
+    
+    <header>
+        <h1>Egypt Tour</h1>
+        <p>6-day tour of Egypt's ancient wonders</p>
+    </header>
+
+    <section>
+        <h2>Destinations</h2>
+        <div class="destinations-container">
+            <div class="destination-card">
+                <img class="places-images" src="assets\pyramid.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Pyramids of Giza</h3>
+                <p>Ancient wonders and the last surviving wonder of the world</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\egyptian_museum.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Egyptian Museum</h3>
+                <p>Home to artifacts from ancient Egypt</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\Citadel.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Citadel of Saladin</h3>
+                <p>Historic fortress with beautiful mosques</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\Valley-of-the-Kings.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Valley of the Kings</h3>
+                <p>Ancient burial site of pharaohs</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\khan_el_khalili.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Khan el Khalili</h3>
+                <p>Famous bazaar and marketplace in Cairo</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\nile_river.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>The Nile River</h3>
+                <p>World's longest river offering scenic views</p>
+            </div>
+        </div>
+    </section>
+
+    <button class="confirm-btn" onclick="confirmBooking('Egypt')">Book Now</button>
+
+    <script>
+        function confirmBooking(tourName) {
+            window.location.href = `booking.html?tour=${tourName}`;
+        }
+    </script>
+</body>
+</html>
+

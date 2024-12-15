@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tour.css">
+    <title>Greece Tour</title>
+</head>
+<body>
+    <nav>
+        <img src="assets/logo.png" alt="Logo" width="100px">
+        <h3>BINUSANTARA Travel</h3>
+    </nav>
+    
+    <header>
+        <h1>Greece Tour</h1>
+        <p>6-day tour of Greece and its stunning destinations</p>
+    </header>
+
+    <section>
+        <h2>Destinations</h2>
+        <div class="destinations-container">
+            <div class="destination-card">
+                <img class="places-images" src="assets\santorini.webp" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Santorini</h3>
+                <p>Beautiful volcanic island with white-washed buildings</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\Acropolis.webp" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Acropolis of Athens</h3>
+                <p>Ancient citadel overlooking Athens</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\acropolis_museum.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Acropolis Museum</h3>
+                <p>Showcasing artifacts from the Acropolis</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\elafonissi_beach.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Elafonissi Beach</h3>
+                <p>Famous pink sand beach</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\parthenon-min.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Parthenon</h3>
+                <p>Iconic temple dedicated to Athena</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\Lycabettus-960x720.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Mount Lycabettus</h3>
+                <p>Hill with panoramic views of Athens</p>
+            </div>
+        </div>
+    </section>
+
+    <button class="confirm-btn" onclick="confirmBooking('Greece')">Book Now</button>
+
+    <script>
+        function confirmBooking(tourName) {
+            window.location.href = `booking.html?tour=${tourName}`;
+        }
+    </script>
+</body>
+</html>

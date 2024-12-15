@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tour.css">
+    <title>America Tour</title>
+</head>
+<body>
+    <nav>
+        <img src="assets/logo.png" alt="Logo" width="100px">
+        <h3>BINUSANTARA Travel</h3>
+    </nav>
+    
+    <header>
+        <h1>America Tour</h1>
+        <p>6-day tour of America's iconic landmarks</p>
+    </header>
+
+    <section>
+        <h2>Destinations</h2>
+        <div class="destinations-container">
+            <div class="destination-card">
+                <img class="places-images" src="assets\Times_Square.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Times Square</h3>
+                <p>Famous intersection with bright lights and entertainment</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\liberty.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Statue of Liberty</h3>
+                <p>Icon of freedom and democracy</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\Mount_Rushmore_detail_view_(100MP).jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Mount Rushmore</h3>
+                <p>Monument featuring four US presidents</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\Grand_Canyon.jpeg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Grand Canyon</h3>
+                <p>Vast canyon with breathtaking views</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\golden-gate-bridge.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Golden Gate Bridge</h3>
+                <p>Iconic suspension bridge in San Francisco</p>
+            </div>
+            <div class="destination-card">
+                <img class="places-images" src="assets\hoover_dam.jpg" alt="Eiffel Tower"
+                width="420px"
+                height="400px">
+                <h3>Hoover Dam</h3>
+                <p>Massive concrete dam on the Colorado River</p>
+            </div>
+        </div>
+    </section>
+
+    <button class="confirm-btn" onclick="confirmBooking('America')">Book Now</button>
+
+    <script>
+        function confirmBooking(tourName) {
+            window.location.href = `booking.html?tour=${tourName}`;
+        }
+    </script>
+</body>
+</html>

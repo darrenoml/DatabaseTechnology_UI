@@ -1,0 +1,174 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        to right,
+        #fff4e6 0%,
+        #fff4e6 50%,
+        #e8f5e9 50%,
+        #e8f5e9 100%
+    );
+}
+
+nav {
+    height: 90px;
+    background: linear-gradient(
+        to right,
+        #e8f5e9 0%,
+        #e8f5e9 50%,
+        #fff4e6 50%,
+        #fff4e6 100%
+    );
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+section {
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+section h2,
+section h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #e8f5e9;
+    color: #333;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #ff7043;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background: linear-gradient(
+        to right,
+        #e8f5e9 0%,
+        #e8f5e9 50%,
+        #fff4e6 50%,
+        #fff4e6 100%
+    );
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav img {
+        margin-bottom: 10px;
+    }
+
+    .nav-title {
+        text-align: center;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+}
