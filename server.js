@@ -1,38 +1,19 @@
-const express = require('express');
-const mysql = require('mysql');
-const bodyParser = require('body-parser');
-const path = require('path');
+import mysql from "mysql2"
+import dotenv from 'dotenv'
 
-const app = express();
-const PORT = 3000;
+dotenv.config()
+const server = mysql.createPool({
+    host        : process.env.SQL_HOST,
+    user        : process.env.SQL_USER,
+    password    : process.env.SQL_PASS,
+    database    : process.env.SQL_DABA
+}).promise()
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
-
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'your-username',
-    password: 'your-password',
-    database: 'your-database',
-});
-
-db.connect((err) => {
-    if (err) throw err;
-    console.log('Connected to MySQL!');
-});
-
-app.post('/submit', (req, res) => {
-    const { name, email } = req.body;
-    const sql = 'INSERT INTO users (name, email) VALUES (?, ?)';
-    db.query(sql, [name, email], (err) => {
-        if (err) {
-            console.error(err);
-            res.status(500).json({ message: 'Database error' });
-        } else {
-            res.json({ message: 'Data submitted successfully!' });
-        }
-    });
-});
+const [getBooking] = await server.query('SELECT * FROM Bookings')
+const [insBooking] = await server.query('INSERT INTO Booking VALUES()')
+const [insCustomer] = await server.query('INSERT INTO Customer VALUES()')
+const [showBooking] = await server.query('DELETE FROM Booking')
+console.log(result)
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
